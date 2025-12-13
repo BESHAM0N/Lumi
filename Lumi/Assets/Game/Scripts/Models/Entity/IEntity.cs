@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using Game.Scripts.Models.Health;
 using UnityEngine;
 
-public interface IEntity
+namespace Lumi.Models
 {
-    public int EntityId { get; set; }
-    public IHealth Health { get; set; }
-    
+    public interface IEntity
+    {
+        public int EntityId { get; }
+        public IHealth Health { get; }
+        public IAbility Ability { get; }
+    }
 }
